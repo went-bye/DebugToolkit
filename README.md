@@ -25,7 +25,7 @@ openupm add com.went.uitoolkit
 Add following lines to the `dependencies` section of the `Packages/manifest.json`.
 
 ```
-"com.went.uitoolkit": "https://github.com/fuqunaga/RapidGUI.git"
+"com.went.uitoolkit": "https://github.com/went-bye/DebigToolkit.git"
 ```
 
 ## Quick Start
