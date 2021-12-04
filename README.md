@@ -17,7 +17,7 @@ Unity UItoolkit extensions for Rapid prototyping/development.
 The package is available on the [openupm registry](https://openupm.com/). It's recommended to install it via [openupm-cli](https://github.com/openupm/openupm-cli).
 
 ```
-openupm add com.went.uitoolkit
+openupm add com.went-bye.uitoolkit
 ```
 
 ### Install via git URL
@@ -25,7 +25,7 @@ openupm add com.went.uitoolkit
 Add following lines to the `dependencies` section of the `Packages/manifest.json`.
 
 ```
-"com.went.uitoolkit": "https://github.com/went-bye/DebigToolkit.git"
+"com.went-bye.uitoolkit": "https://github.com/went-bye/DebigToolkit.git"
 ```
 
 ## Quick Start
