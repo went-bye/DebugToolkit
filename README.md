@@ -2,7 +2,7 @@
 
 Unity UItoolkit extensions for Rapid prototyping/development.
 
-![rapidgui](Documentation~/rapidgui.png)
+![rapidgui](Documentation~/main.png)
 
 ## Features
 - UIToolkit for Debug
@@ -31,7 +31,7 @@ Add following lines to the `dependencies` section of the `Packages/manifest.json
 ## Quick Start
 
 ```csharp
-public class TextSandbox : MonoBehaviour
+public class Sandbox : MonoBehaviour
 {
     DebugToolkit _toolkit;
 
