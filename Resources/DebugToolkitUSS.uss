@@ -1,0 +1,212 @@
+:root {
+    --borderColor: #242424;
+    --btnBG: #585858;
+    --btnBGHover: #717171;
+    --btnBGActive: #585858;
+    --popupBG: #2D2D2D;
+    --popupText: white;
+    --inputBG: #2D2D2D;
+}
+
+Label {
+}
+
+Button {
+
+}
+
+VisualElement {
+}
+
+ScrollViewc {
+}
+
+Foldout {
+
+}
+
+Toggle {
+}
+
+ScrollView {
+    width: 300px;
+    max-height: 300px;
+    background-color: #383838;
+}
+
+.unity-base-field__label {
+    color: #BFBCB8;
+}
+
+.unity-label {
+    color: #BFBCB8;
+    margin-top: 0;
+    padding-left: 1px;
+    padding-right: 2px;
+}
+
+/**************
+ * ドロップダウン
+ **************/
+.unity-base-popup-field {
+    border-radius: 3px;
+    padding: 0 3px 1px 3px;
+    border-color: #ACB2BD;
+}
+
+.unity-base-popup-field__input {
+    -unity-text-align: middle-left;
+    border-radius: 3px;
+    flex-direction: row;
+    padding: 0 3px 1px 3px;
+    border-width: 1px;
+    border-color: var(--borderColor);
+    min-width: 55px;
+    background-color: var(--btnBG);
+
+}
+
+.unity-base-popup-field:hover:enabled > .unity-base-popup-field__input {
+    background-color: var(--btnBGHover);
+}
+
+.unity-base-popup-field__text {
+    margin-top: 1px;
+    overflow: hidden;
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+    flex-grow: 1;
+    color: #BFBCB8;
+}
+
+/* ドロップダウンポップアップ*/
+.unity-base-dropdown__container-inner {
+    background-color: var(--popupBG);
+}
+
+.unity-base-dropdown__label {
+    color: var(--popupText);
+
+}
+
+
+/**************
+ * ボタン
+ **************/
+.unity-button {
+    -unity-text-align: middle-center;
+    flex: 0 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEEEEE;
+    background-color: var(--btnBG);
+    border-color: var(--borderColor);
+    border-width: 1px;
+    padding: 1px 6px 6px 1px;
+    margin: 1px 3px 1px 3px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.unity-button:hover {
+    background-color: var(--btnBGHover);
+}
+
+.unity-button:focus {
+
+}
+
+.unity-button:active {
+    border-color: #ACB2BD;
+    background-color: var(--btnBGActive);
+}
+
+/**************
+ * インプットフィールド
+ **************/
+.unity-base-field__input {
+    flex: 1 0 0;
+    overflow: hidden;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/**************
+ * テキストインプット
+ **************/
+.unity-base-text-field__input {
+    cursor: arrow; /* ワーニング対策 */
+    padding: 1px 2px 0 2px;
+    -unity-overflow-clip-box: content-box;
+    flex: 1 1 auto;
+    background-color: var(--inputBG);
+    border-width: 1px;
+    border-color: #1A1A1A;
+    border-radius: 3px;
+    color: #D8D8D8;
+}
+
+.unity-base-text-field__input--single-line {
+    -unity-text-align: middle-left;
+}
+
+.unity-base-text-field__input:focus {
+    border-width: 1px;
+    border-color: #593032;
+    padding-bottom: 0;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.unity-base-text-field:focus > .unity-base-text-field__input {
+    border-width: 1px;
+    border-color: #593032;
+    --unity-cursor-color: white;
+    padding-bottom: 0;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+/**************
+ * トグル
+ **************/
+.unity-toggle__input {
+    flex-direction: row;
+    flex-basis: auto;
+}
+
+.unity-toggle__checkmark {
+    padding-top: 0;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    align-self: center;
+    background-color: var(--inputBG);
+    -unity-background-image-tint-color: white;
+    /*background-image:  url('uipackageresources/images/d_toggle_bg.png');*/
+}
+
+/**************
+ * 折りたたみ
+ **************/
+.unity-foldout__toggle {
+    background-color: #222222;
+    color: #BFBCB8;
+}
+
+
+.unity-base-field__label--with-dragger {
+    cursor: arrow; /* ワーニング対策 */
+}
+
+.rootFoldout {
+    width: 350px;
+    background-color: #383838;
+
+}
+
+.textElement {
+    flex-direction: row;
+    justify-content: space-between;
+}
