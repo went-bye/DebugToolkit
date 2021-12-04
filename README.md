@@ -2,7 +2,7 @@
 
 Unity UItoolkit extensions for Rapid prototyping/development.
 
-![rapidgui](Documentation~/main.png)
+![main](Documentation/main.png)
 
 ## Features
 - UIToolkit for Debug
