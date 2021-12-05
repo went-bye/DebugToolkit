@@ -1,7 +1,7 @@
 {
     "name": "com.went-bye.debugtoolkit",
     "displayName": "DebugToolkit", 
-    "version": "0.0.2",               
+    "version": "0.0.3",               
     "unity": "2021.2",
     "description": "UIToolkit  for RuntimeDebug",
     "author": {

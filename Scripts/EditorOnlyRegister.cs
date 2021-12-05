@@ -6,7 +6,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DebugToolkitForEditor
+public class EditorOnlyRegister
 {
     //============================================
     // Vecor2 Int
