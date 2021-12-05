@@ -13,7 +13,7 @@ public class DebugToolkit : MonoBehaviour
     private ScrollView _scrollView;
     private Dictionary<String, Logger> _text = new Dictionary<string, Logger>();
     private Dictionary<String, ProgressBar> _progress = new Dictionary<string, ProgressBar>();
-    private UIDocument _uiDocument;
+    [SerializeField] private UIDocument _uiDocument;
 
     public void AddButton(string label, Action clickEvent)
     {
