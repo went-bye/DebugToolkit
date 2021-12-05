@@ -30,7 +30,6 @@ public class DebugToolkit : MonoBehaviour
             return;
         }
 
-        //要素追加
         var logger = new Logger(keyLabel, log);
         _text.Add(keyLabel, logger);
         _scrollView.Add(logger);
@@ -147,8 +146,6 @@ public class DebugToolkit : MonoBehaviour
 #endif
     }
 
-    // colorfieldが使えないので、gradientの0秒で代用
-    //TODO https://light11.hatenadiary.com/entry/2020/04/26/124956
     public void AddColor(string label, Action<Color> changedEvent, Color defaultValue)
     {
 #if UNITY_EDITOR
@@ -216,7 +213,7 @@ public class DebugToolkit : MonoBehaviour
         rootVisualElement.Add(_foldout);
 
         // スクロールビュー
-        _scrollView = new ScrollView(); //箱を用意する
+        _scrollView = new ScrollView();
         _foldout.Add(_scrollView);
     }
 }
@@ -228,7 +225,7 @@ public class Logger : VisualElement
 
     public Logger(string keyLabel, string log)
     {
-        this.AddToClassList("textElement"); //NiuUSS
+        this.AddToClassList("textElement");
         _key = new Label(keyLabel);
         _logText = new Label(log);
         Add(_key);
