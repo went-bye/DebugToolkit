@@ -5,7 +5,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-// gameobject.AddComponent<NiuGUI>(); で取得できます。
+[RequireComponent(typeof(UIDocument))]
 public class DebugToolkit : MonoBehaviour
 {
     // メンバ変数
@@ -13,6 +13,7 @@ public class DebugToolkit : MonoBehaviour
     private ScrollView _scrollView;
     private Dictionary<String, Logger> _text = new Dictionary<string, Logger>();
     private Dictionary<String, ProgressBar> _progress = new Dictionary<string, ProgressBar>();
+    private UIDocument _uiDocument;
 
     public void AddButton(string label, Action clickEvent)
     {
@@ -192,14 +193,15 @@ public class DebugToolkit : MonoBehaviour
         _scrollView.Add(progressBar);
     }
 
+    private void Reset()
+    {
+        _uiDocument = GetComponent<UIDocument>();
+        _uiDocument.panelSettings = Resources.Load<PanelSettings>("DebugToolkitPanelSettings");
+    }
 
     private void OnEnable()
     {
-        var comp = gameObject.AddComponent<UIDocument>();
-        comp.panelSettings = Resources.Load<PanelSettings>("DebugToolkitPanelSettings");
-        var rootVisualElement = comp.rootVisualElement;
-
-
+        var rootVisualElement = _uiDocument.rootVisualElement;
         rootVisualElement.styleSheets.Clear();
         var styleSheet = Resources.Load<StyleSheet>("DebugToolkitUSS");
 #if UNITY_EDITOR
@@ -209,19 +211,13 @@ public class DebugToolkit : MonoBehaviour
 
         // foldout
         _foldout = new Foldout();
-        _foldout.text = "Foldout";
+        _foldout.text = "DebugToolkit";
         _foldout.AddToClassList("rootFoldout");
         rootVisualElement.Add(_foldout);
 
         // スクロールビュー
         _scrollView = new ScrollView(); //箱を用意する
         _foldout.Add(_scrollView);
-
-
-        // ドロップダウン
-        var dropList = new List<string>() {"Test", "Hey"};
-        var dropbox = new DropdownField("Choise", dropList, "Test") { };
-        _scrollView.Add(dropbox);
     }
 }
 
