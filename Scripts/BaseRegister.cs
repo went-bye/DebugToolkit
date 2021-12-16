@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 namespace DebugToolkit
 {
     [RequireComponent(typeof(UIDocument))]
-
     public class BaseRegister : MonoBehaviour
     {
         [SerializeField] protected UIDocument uiDocument;

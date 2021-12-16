@@ -120,20 +120,21 @@ public class EditorOnlyRegister
         curveField.RegisterValueChangedCallback(_ => { changedEvent(_.newValue); });
         element.Add(curveField);
     }
-    public static  StyleSheet GetDefaultSkin()
+
+    public static StyleSheet GetDefaultSkin()
     {
         //UnityEditor.UIElementsのアセンブリを取得
         var assembly = typeof(Toolbar).Assembly;
-    
+
         //UIElementsEditorUtilityのTypeを取得
         var type = assembly.GetType("UnityEditor.UIElements.UIElementsEditorUtility");
         if (type == null) return null;
-    
+
         //StyleSheetを格納するフィールドを取得
         var darkField = type.GetField("s_DefaultCommonDarkStyleSheet", BindingFlags.Static | BindingFlags.NonPublic);
-    
+
         if (darkField == null) return null;
-    
+
         return (StyleSheet) darkField.GetValue(null);
     }
 }
